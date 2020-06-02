@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 5000px;
+    /* background-color: green */
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+}
+.navbar > a{
+    font-weight: bolder;
+    font-size: large;
+}
+
+
+@media(max-width : 991px){
+    .navbar-nav {
+        background-color: white;
+        padding-left: 1%
+    }
+    
+    .navbar .collapse a{
+        color: black !important
+    }
+    .navbar .collapse a:hover{
+        color: blue !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+.main{
+    width: 100%;
+    height: 600px;
+    background: rgb(2,0,36);
+    background-image: url(../images/main.jpg);
+    color: white;
+    display: flex
+}
+.main .container{
+    display: flex;
+    align-items: center;
+    animation-name: fadeleft;
+    animation-duration: 2s
+        
+}
+.main .txt{
+    float: left;
+}
+.main .txt button{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    text-transform: capitalize;
+    padding: 9px 15px;
+    transition: all .3s ease-in-out
+}
+.main .txt button:hover{
+    background-color: white;
+    color: #27316e
+}
+.main .txt h3{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    margin-bottom: 1rem
+}
+.main .img{
+    margin-left: auto;
+    position: relative;
+}
+.main .img img:last-of-type{
+    position: absolute;
+    top: -18%;
+    right: 30%;
+}
+.main .img img:first-of-type{
+
+}
+.main .img img{
+    border-radius: 22px;
+    box-shadow: 4px 4px #9fa1a4
+
+}
+@media(max-width:800px){
+    .main .txt {
+        padding-right: 3rem
+    }
+}
+@media(max-width:576px){
+    .main{
+        height: 700px;
+    }
+    
+    .main .container{
+        display: grid;
+        grid-column: auto;
+        align-items: center
+        
+    }
+    .main .txt {
+        text-align: center;
+        padding-right: 0;
+        margin-top: 20%;
+        margin-bottom: 30%
+    }
+    .main .img{
+        margin-right: 20%
+    }
+  
+}
+
+@keyframes fadeleft{
+    from{
+        margin-left: -100%
+    }
+    to{
+        margin-left: 4%;
+        display: flex;
+        align-items: center;
+    }
+}
