@@ -104,7 +104,8 @@ body{
     .main .container{
         display: grid;
         grid-column: auto;
-        align-items: center
+        align-items: center;
+        animation-name: none
         
     }
     .main .txt {
