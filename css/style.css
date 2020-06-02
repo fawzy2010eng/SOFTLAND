@@ -121,11 +121,9 @@ body{
 
 @keyframes fadeleft{
     from{
-        margin-left: -100%
+        padding-right: 100%
     }
     to{
-        margin-left: 4%;
-        display: flex;
-        align-items: center;
+        padding-left: 15px
     }
 }
