@@ -8,6 +8,7 @@ document.querySelector('.navbar i').style.color = 'white';
 var btnexpand = document.querySelector('.navbar button');
 var expand = btnexpand.getAttribute('aria-expanded');
 var menu = document.querySelector('.navbar-nav');
+
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (currentScrollPos == 0) {
@@ -25,3 +26,11 @@ window.onscroll = function() {
 
   }
 }
+window.addEventListener('scroll',function(){
+    var currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > 300 ) {
+        var profits = document.querySelector('.profits');
+        profits.style.marginTop = '90px';
+        profits.style.opacity = '1'
+    }
+})
