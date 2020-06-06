@@ -31,6 +31,51 @@ window.addEventListener('scroll',function(){
     if (currentScrollPos > 300 ) {
         var profits = document.querySelector('.profits');
         profits.style.marginTop = '90px';
-        profits.style.opacity = '1'
+        profits.style.opacity = '1';
     }
 })
+window.addEventListener('scroll',function(){
+	var currentScrollPos = window.pageYOffset;
+	if(currentScrollPos > 570){
+		document.querySelector(".navbar").style.boxShadow = '.3rem .3rem .3rem rgba(8,8,8,.1 )'
+	}else{
+		document.querySelector(".navbar").style.boxShadow = 'none'
+	}
+})
+
+window.addEventListener('scroll',function(){
+	var currentScrollPos = window.pageYOffset;
+	if(currentScrollPos > 1000){
+		document.querySelector(".adv img").style.marginRight = '0px'
+	}
+})
+
+
+window.addEventListener('scroll',function(){
+	var currentScrollPos = window.pageYOffset;
+	if(currentScrollPos > 1600){
+		document.querySelector(".lastimg").style.marginLeft = '0px'
+	}
+})
+
+
+
+$('.owl-carousel').owlCarousel({
+    items: 1,
+	autoplay : true,
+    loop : true,
+    dots : true,
+    dotsEach : 1,	
+	responsive:{
+        0:{
+            dots:false
+        },
+        480:{
+            dots:true
+        },
+        1200:{
+            dots:true
+        }
+    }    
+})
+;
